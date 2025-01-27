@@ -23,7 +23,7 @@
 
 
 
-  --background-color: linear-gradient(90deg, rgba(107,33,168,1) 0%, rgba(126,34,206,1) 24%, rgba(147,51,234,1) 100%);
+  --background-color: linear-gradient(90deg, rgb(10, 72, 153) 0%, rgb(10, 72, 153) 24%, rgb(10, 72, 153) 100%);
   --color-texte: #f3e8ff;
   --background-color2: #FFF;
   --color-texte2: #402060;
@@ -232,7 +232,7 @@ img{
 /* HEADER */
 header.container{
   padding-top: 150px;
-  background: url('images/fond.jpg');
+  /* background: url('images/fond.jpg'); */
   height: 60vh;
   width: auto;
   z-index: -1;
@@ -272,8 +272,8 @@ header h1, header p{
   justify-content: space-around;
   height: 100px;
   /* background-color: var(--color-secondary-transparent); */
-  background: rgb(107,33,168);
-  background: linear-gradient(90deg, rgba(107,33,168,1) 0%, rgba(126,34,206,1) 24%, rgba(147,51,234,1) 100%);
+  background: rgb(10, 72, 153);
+  background: linear-gradient(90deg, rgb(10, 72, 153) 0%, rgb(10, 72, 153) 24%, rgb(10, 72, 153) 100%);
   border-radius: 0 0 80px 0;
   border-bottom: 1px solid var(--color-texte);
   position: fixed;
