@@ -1,0 +1,54 @@
+window.addEventListener("DOMContentLoaded", () => {
+    AOS.init();
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                const offset = 100;
+                const targetOffset = targetElement.getBoundingClientRect().top + window.scrollY - offset;
+
+                if (window.location.pathname === '/' && window.location.hash === '') {
+                    window.scrollTo({
+                        top: targetOffset,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    window.scrollTo({
+                        top: targetOffset,
+                        behavior: 'smooth'
+                    });
+
+                    history.pushState(null, null, window.location.pathname);
+                }
+            }
+        });
+    });
+
+    
+    if (window.innerWidth <= 768) {
+        var elements = document.querySelectorAll('[data-aos]');
+        elements.forEach(function(element) {
+            element.setAttribute('data-aos', 'fade-right');
+            element.setAttribute('data-aos-anchor-placement', 'top-bottom');
+            element.setAttribute('data-aos-duration', '750');
+        });
+    }
+    
+    // var elements = document.querySelectorAll('[data-aos="fade-up"]');
+    
+    function closeMenu() {
+        var burgerIcon = document.querySelector('.burger-icon');
+        var menu = document.querySelector('.pages');
+        menu.classList.remove('show');
+        burgerIcon.classList.remove('cross');
+    }
+    
+    var menuLinks = document.querySelectorAll('.page');
+    menuLinks.forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+    });
+});
