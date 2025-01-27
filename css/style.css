@@ -284,8 +284,8 @@ header h1, header p{
 }
 
 .logo{
-  height: 80%;
-  padding: 10% 0;
+  height: 120%;
+  /* padding: 5% 0; */
 }
 
 .pages{
