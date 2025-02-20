@@ -6,7 +6,7 @@
 <head>
     <title>Hertzy Tambwe - Software Engineer</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="{% static "assets/css/styles.css" %}">
+    <link rel="stylesheet" href="{% static "portfolio/css/styles.css" %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="print"
         onload="this.media='all'">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -21,7 +21,7 @@
         <div class="home">
             <div class="content">
 
-                <img class="img-left" src="{% static "assets/images/hertzy_tambwe.png" %}" alt="defaut.png">
+                <img class="img-left" src="{% static "portfolio/images/hertzy_tambwe.png" %}" alt="defaut">
 
                 <h2>Bonjour, je suis <span>Hertzy Tambwe</span>.</h2>
                 <h3>Je suis un développeur de logiciels full stack avec plus de 4 ans d'expérience progressive.</h3>
@@ -39,7 +39,7 @@
                 <a href="https://www.facebook.com/hertzytambwe" target="_blank" class="icon-button facebook"><i
                         class="fa fa-facebook"></i><span></span></a>
                 <p>
-                    <a href="#" class="btn btn-primary">Lire mes articles</a>
+                    <a href="{% url 'my-projets' %}" class="btn btn-primary">Lire mes articles</a>
                 </p>
             </div>
 
