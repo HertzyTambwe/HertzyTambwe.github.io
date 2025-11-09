@@ -115,33 +115,40 @@ function type() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', type);
+function downloadCV() {
+    const link = document.createElement('a');
+    link.href = 'docs/CV Tambwe Hertzy.pdf'; // Remplace par le chemin réel de ton CV
+    link.download = 'CV Tambwe Hertzy.pdf'; // Nom du fichier téléchargé
+    link.click();
+}
 
-document.addEventListener("DOMContentLoaded", () => {
-  const loadingText = document.getElementById("loading-text");
-  const mainIcon = document.querySelector(".main-icon");
-  const subIcons = document.querySelectorAll(".sub-icons i");
-  const designerText = document.getElementById("designer-text");
-  const mainPage = document.getElementById("main-page");
-  const loadingScreen = document.getElementById("loading-screen");
+// document.addEventListener('DOMContentLoaded', type);
 
-  function showElement(element, delay=0){
-    setTimeout(() => {
-      element.classList.remove("hidden");
-      element.classList.add("fall");
-    }, delay);
-  }
+// document.addEventListener("DOMContentLoaded", () => {
+//   const loadingText = document.getElementById("loading-text");
+//   const mainIcon = document.querySelector(".main-icon");
+//   const subIcons = document.querySelectorAll(".sub-icons i");
+//   const designerText = document.getElementById("designer-text");
+//   const mainPage = document.getElementById("main-page");
+//   const loadingScreen = document.getElementById("loading-screen");
 
-  showElement(loadingText, 0);          
-  showElement(mainIcon, 800);         
-  subIcons.forEach((icon, idx) => {
-    showElement(icon, 1600 + idx*400);  
-  });
-  showElement(designerText, 2800);    
+//   function showElement(element, delay=0){
+//     setTimeout(() => {
+//       element.classList.remove("hidden");
+//       element.classList.add("fall");
+//     }, delay);
+//   }
 
-  setTimeout(() => {
-    loadingScreen.style.opacity = '0';
-    setTimeout(() => loadingScreen.style.display='none', 500);
-    mainPage.classList.add("visible");
-  }, 4000);
-});
+//   showElement(loadingText, 0);          
+//   showElement(mainIcon, 800);         
+//   subIcons.forEach((icon, idx) => {
+//     showElement(icon, 1600 + idx*400);  
+//   });
+//   showElement(designerText, 2800);    
+
+//   setTimeout(() => {
+//     loadingScreen.style.opacity = '0';
+//     setTimeout(() => loadingScreen.style.display='none', 500);
+//     mainPage.classList.add("visible");
+//   }, 4000);
+// });
