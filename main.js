@@ -117,7 +117,7 @@ function type() {
 
 function downloadCV() {
     const link = document.createElement('a');
-    link.href = 'docs/CV Tambwe Hertzy.pdf'; // Remplace par le chemin réel de ton CV
+    link.href = './docs/CV Tambwe Hertzy.pdf'; // Remplace par le chemin réel de ton CV
     link.download = 'CV Tambwe Hertzy.pdf'; // Nom du fichier téléchargé
     link.click();
 }
